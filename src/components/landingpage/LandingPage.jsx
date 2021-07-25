@@ -1,5 +1,5 @@
 import React from 'react';
-import './landingpage.css';
+import './Landingpage.scss';
 
 export default function LandingPage() {
   return (
@@ -14,7 +14,7 @@ export default function LandingPage() {
           <span className="heading-primary--sub">if you are looking for style, the search is over.</span>
         </h1>
 
-        <a href="#" className='btn btn--white btn--animated'>My Works</a>
+        <a href="#" className='btn btn--white btn--animated'>My Work</a>
       </div>
     </div>
   );
