@@ -1,26 +1,40 @@
+@import '../../App.scss';
+
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #24242448, #000000),
-    url(../../assets/bubbles.jpeg);
+  background-image: linear-gradient(
+      to right bottom,
+      $color-primary-light,
+      $color-primary-dark
+    ),
+    url(../../assets/img/bubbles.jpeg);
   background-size: cover;
   background-position: top;
-  color: white;
+  color: $color-text-bright;
   position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 400px, 0 100%);
-}
 
-.header__logo-container {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-container {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  font-weight: 500;
-  margin-left: 1rem;
-  font-size: 4.5rem;
-  /* height: 3.5rem; this is if I add a logo image */
+  &__logo {
+    font-weight: 500;
+    margin-left: 1rem;
+    font-size: 4.5rem;
+    /* height: 3.5rem; this is if I add a logo image */
+  }
+
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
 }
 
 /* .logo:hover {
@@ -33,137 +47,28 @@
 
   backface-visibility: hidden;
   margin-bottom: 6rem;
-}
 
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+  &--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
 
-.heading-primary--main {
-  display: block;
-  font-size: 6rem;
-  font-weight: 400;
-  letter-spacing: 3.5rem;
-
-  animation-name: moveInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1.75rem;
-
-  animation-name: moveInRight;
-  animation-duration: 3s;
-  animation-timing-function: ease;
-  /* animation-delay: 1s; */
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease;
   }
 
-  80% {
-    transform: translateX(.5rem);
-  }
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.75rem;
 
-  100% {
-    opacity: 1;
-    transform: translate(0);
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    /* animation-delay: 1s; */
   }
 }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-
-  80% {
-    transform: translateX(-.5rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInBtn {
-  0% {
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-.btn:link,
-.btn:visited {
-  text-transform: uppercase;
-  text-decoration: none;
-  padding: 1.5rem 4rem;
-  display: inline-block;
-  border-radius: 10rem;
-  transition: all .2s;
-  position: relative;
-}
-
-.btn:hover {
-  transform: translateY(-.3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-}
-
-.btn:active {
-  transform: translateY(-.1rem);
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
-}
-
-.btn--white {
-  background-color: #fff;
-  color: #777;
-}
-
-.btn::after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 10rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all .4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
-
-.btn--animated {
-  animation: moveInBtn .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
-
-.btn--animated {
-  animation: moveInBtn .5s ease-out .75s;
-  animation-fill-mode: backwards;
-}

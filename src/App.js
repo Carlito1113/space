@@ -1,4 +1,5 @@
 import './App.scss';
+import './components/landingpage/LandingPage.scss';
 import LandingPage from './components/landingpage/LandingPage';
 
 function App() {
