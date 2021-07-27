@@ -4,8 +4,8 @@
   height: 95vh;
   background-image: linear-gradient(
       to right bottom,
-      $color-primary-light,
-      $color-primary-dark
+      $color-intro-light,
+      $color-intro-dark
     ),
     url(../../assets/img/bubbles.jpeg);
   background-size: cover;
@@ -13,7 +13,7 @@
   color: $color-text-bright;
   position: relative;
 
-  clip-path: polygon(0 0, 100% 0, 100% 400px, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__logo-container {
     position: absolute;
@@ -40,6 +40,7 @@
 /* .logo:hover {
   animation: moveInRight 3s ease;
 } */
+
 
 .heading-primary {
   color: #ffffff;
@@ -71,4 +72,3 @@
     /* animation-delay: 1s; */
   }
 }
-

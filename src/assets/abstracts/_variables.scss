@@ -1,9 +1,24 @@
 $color-primary: rgb(99, 92, 92);
+$color-primary-light: #38dee4;
+$color-primary-dark: rgb(78, 156, 168);
 
-$color-primary-light: #24242448;
-$color-primary-dark: #000000;
+$color-intro-light: #24242448;
+$color-intro-dark: #000000;
+
+$color-grey-light-1: #f7f7f7;
 
 $color-text-bright: #65faff;
 
 $color-white: #fff;
 $color-black: #000;
+
+// FONT
+$default-font-size: 1.6rem;
+
+
+
+
+// Grid
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-horizontal: 6rem;

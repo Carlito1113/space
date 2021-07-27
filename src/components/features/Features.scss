@@ -1,0 +1,28 @@
+@import '../../assets/abstracts/variables';
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-intro-light,
+    $color-intro-dark
+  ),
+  url(../../assets/img/pexelsarrowgeometric.jpeg);
+}
+
+.feature-box {
+background-color: rgba($color-white, .8);
+font-size: 1.5rem;
+padding: 2.5rem;
+text-align: center;
+border-radius: .3rem;
+box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+  &__icon {
+
+  }
+
+  &__text {
+
+  }
+}
